@@ -1,0 +1,1057 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+    align-items: center;
+}
+
+/* --- SECTION GAUCHE --- */
+.left-section {
+    flex: 1;
+    color: #1c1e21;
+}
+
+.facebook-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #0a66c2, #0a7ac7);
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fb-icon {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+
+.left-section h1 {
+    font-size: 64px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #0a66c2;
+}
+
+.tagline {
+    font-size: 24px;
+    color: #65676b;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.feature-icon {
+    font-size: 32px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.feature-text h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1c1e21;
+    margin-bottom: 5px;
+}
+
+.feature-text p {
+    font-size: 14px;
+    color: #65676b;
+}
+
+/* --- SECTION DROITE --- */
+.right-section {
+    flex: 1;
+    max-width: 400px;
+}
+
+.login-form {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cED0D4;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #f5f6f7;
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    background-color: #fff;
+    border-color: #0a66c2;
+    box-shadow: 0 0 0 3px rgba(10, 102, 194, 0.1);
+}
+
+.input-field::placeholder {
+    color: #65676b;
+}
+
+.error-message {
+    color: #f02849;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+    min-height: 16px;
+}
+
+.input-field.error {
+    border-color: #f02849;
+    background-color: #fff5f6;
+}
+
+.login-btn, .create-account-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.login-btn {
+    background: linear-gradient(135deg, #0a66c2, #0a7ac7);
+    color: white;
+    margin-bottom: 12px;
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #074ec1, #0866b5);
+    box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
+}
+
+.login-btn:active {
+    transform: scale(0.98);
+}
+
+.login-btn:disabled {
+    background: #cED0D4;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.create-account-btn {
+    background-color: #31a24c;
+    color: white;
+    margin-top: 12px;
+}
+
+.create-account-btn:hover {
+    background-color: #2d943f;
+}
+
+.create-account-btn:active {
+    transform: scale(0.98);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+    color: #65676b;
+    font-weight: 500;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: #cED0D4;
+}
+
+.divider span {
+    margin: 0 12px;
+}
+
+.forgot-password {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.forgot-password a {
+    color: #0a66c2;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.footer-info {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #65676b;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.footer-info a {
+    color: #0a66c2;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+/* --- MODAL --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 0;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 432px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #000;
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #65676b;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.close-btn:hover {
+    background-color: #f0f2f5;
+}
+
+#signupForm {
+    padding: 16px;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.form-row input {
+    flex: 1;
+}
+
+#signupForm .input-field {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+#signupForm label {
+    display: block;
+    font-size: 12px;
+    color: #65676b;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.gender-options {
+    display: flex;
+    gap: 15px;
+}
+
+.gender-options label {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.gender-options input {
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Ultra Large Screens (4K) */
+@media (min-width: 1920px) {
+    .container {
+        gap: 60px;
+    }
+
+    .left-section h1 {
+        font-size: 80px;
+    }
+
+    .tagline {
+        font-size: 28px;
+    }
+
+    .login-form {
+        max-width: 500px;
+    }
+}
+
+/* Large Screens (Desktop) */
+@media (max-width: 1440px) and (min-width: 1025px) {
+    .container {
+        gap: 50px;
+    }
+
+    .left-section h1 {
+        font-size: 60px;
+    }
+}
+
+/* Medium Screens (Tablet Landscape) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .left-section {
+        text-align: center;
+    }
+
+    .left-section h1 {
+        font-size: 48px;
+    }
+
+    .tagline {
+        font-size: 18px;
+        max-width: 600px;
+        margin: 0 auto 30px;
+    }
+
+    .features {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .facebook-logo {
+        display: flex;
+        margin: 0 auto 20px;
+    }
+
+    .right-section {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .login-form {
+        padding: 20px;
+    }
+
+    .feature {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .feature-icon {
+        font-size: 40px;
+        min-width: 50px;
+    }
+}
+
+/* Small Tablets (Portrait) */
+@media (max-width: 768px) and (min-width: 601px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 25px;
+        padding: 0;
+    }
+
+    .left-section {
+        text-align: center;
+        order: 2;
+    }
+
+    .right-section {
+        order: 1;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .left-section h1 {
+        font-size: 40px;
+    }
+
+    .tagline {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .features {
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .login-form {
+        padding: 18px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+
+    .input-field {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .login-btn, .create-account-btn {
+        padding: 11px;
+        font-size: 15px;
+    }
+
+    .feature {
+        gap: 12px;
+    }
+
+    .feature-icon {
+        font-size: 28px;
+        min-width: 35px;
+    }
+
+    .facebook-logo {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 15px;
+    }
+
+    .fb-icon {
+        font-size: 42px;
+    }
+}
+
+/* Medium Phones (Landscape & Large Portrait) */
+@media (max-width: 600px) and (min-width: 481px) {
+    body {
+        padding: 12px;
+        min-height: 100vh;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .left-section {
+        text-align: center;
+        order: 2;
+        margin-top: 20px;
+    }
+
+    .right-section {
+        order: 1;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .left-section h1 {
+        font-size: 32px;
+        margin-bottom: 8px;
+    }
+
+    .tagline {
+        font-size: 14px;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    .features {
+        gap: 12px;
+        padding: 0;
+    }
+
+    .feature {
+        gap: 10px;
+        text-align: left;
+    }
+
+    .feature-icon {
+        font-size: 24px;
+        min-width: 30px;
+        text-align: center;
+    }
+
+    .feature-text h3 {
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    .feature-text p {
+        font-size: 12px;
+    }
+
+    .login-form {
+        padding: 16px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .input-field {
+        padding: 11px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    .login-btn, .create-account-btn {
+        padding: 10px;
+        font-size: 14px;
+        margin-top: 6px;
+        min-height: 44px;
+    }
+
+    .login-btn {
+        margin-bottom: 10px;
+    }
+
+    .divider {
+        margin: 12px 0;
+    }
+
+    .divider span {
+        margin: 0 8px;
+    }
+
+    .forgot-password {
+        margin-top: 12px;
+    }
+
+    .forgot-password a {
+        font-size: 13px;
+    }
+
+    .footer-info {
+        margin-top: 15px;
+        font-size: 11px;
+    }
+
+    .facebook-logo {
+        width: 65px;
+        height: 65px;
+        margin: 0 auto 12px;
+    }
+
+    .fb-icon {
+        font-size: 38px;
+    }
+}
+
+/* Small Phones (Portrait) */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    body {
+        padding: 10px;
+        background-color: #f0f2f5;
+        min-height: 100vh;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .left-section {
+        text-align: center;
+        order: 2;
+        margin-top: 15px;
+        padding: 0 5px;
+    }
+
+    .right-section {
+        order: 1;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .left-section h1 {
+        font-size: 28px;
+        margin-bottom: 5px;
+        font-weight: 800;
+    }
+
+    .tagline {
+        font-size: 13px;
+        margin-bottom: 12px;
+        line-height: 1.3;
+        color: #65676b;
+    }
+
+    .features {
+        gap: 10px;
+        padding: 0;
+    }
+
+    .feature {
+        gap: 8px;
+        text-align: left;
+    }
+
+    .feature-icon {
+        font-size: 22px;
+        min-width: 28px;
+        text-align: center;
+    }
+
+    .feature-text h3 {
+        font-size: 13px;
+        margin-bottom: 2px;
+        font-weight: 600;
+    }
+
+    .feature-text p {
+        font-size: 11px;
+        color: #65676b;
+        line-height: 1.3;
+    }
+
+    .login-form {
+        padding: 14px;
+        border-radius: 8px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-group {
+        margin-bottom: 9px;
+    }
+
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #cED0D4;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #f5f6f7;
+        min-height: 44px;
+    }
+
+    .input-field:focus {
+        outline: none;
+        background-color: #fff;
+        border-color: #0a66c2;
+        box-shadow: 0 0 0 2px rgba(10, 102, 194, 0.08);
+    }
+
+    .login-btn, .create-account-btn {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        min-height: 44px;
+        margin-top: 5px;
+    }
+
+    .login-btn {
+        background: linear-gradient(135deg, #0a66c2, #0a7ac7);
+        color: white;
+        margin-bottom: 9px;
+    }
+
+    .login-btn:hover {
+        background: linear-gradient(135deg, #074ec1, #0866b5);
+    }
+
+    .create-account-btn {
+        background-color: #31a24c;
+        color: white;
+        margin-top: 9px;
+    }
+
+    .create-account-btn:hover {
+        background-color: #2d943f;
+    }
+
+    .facebook-logo {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 10px;
+    }
+
+    .fb-icon {
+        font-size: 35px;
+    }
+
+    .divider {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        color: #65676b;
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    .divider::before,
+    .divider::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background-color: #cED0D4;
+    }
+
+    .divider span {
+        margin: 0 6px;
+    }
+
+    .forgot-password {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .forgot-password a {
+        color: #0a66c2;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .footer-info {
+        margin-top: 12px;
+        font-size: 10px;
+        color: #65676b;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .footer-info a {
+        color: #0a66c2;
+    }
+
+    /* Modal sur Mobile */
+    .modal.active {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .modal-content {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 12px 12px 0 0;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-header {
+        padding: 12px 14px;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .modal-header h2 {
+        font-size: 24px;
+    }
+
+    .close-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 24px;
+    }
+
+    #signupForm {
+        padding: 14px;
+    }
+
+    .form-row {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .form-row input {
+        width: 100%;
+    }
+
+    #signupForm .input-field {
+        width: 100%;
+        margin-bottom: 9px;
+        min-height: 44px;
+    }
+
+    #signupForm label {
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+
+    .gender-options {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .gender-options label {
+        font-size: 12px;
+    }
+
+    .error-message {
+        font-size: 11px;
+        min-height: 14px;
+    }
+}
+
+/* Extra Small Phones (moins de 360px) */
+@media (max-width: 360px) {
+    body {
+        padding: 8px;
+    }
+
+    .container {
+        gap: 12px;
+    }
+
+    .left-section h1 {
+        font-size: 24px;
+    }
+
+    .tagline {
+        font-size: 12px;
+    }
+
+    .login-form {
+        padding: 12px;
+    }
+
+    .input-field {
+        padding: 9px;
+        font-size: 15px;
+    }
+
+    .login-btn, .create-account-btn {
+        font-size: 12px;
+        padding: 9px;
+    }
+
+    .facebook-logo {
+        width: 55px;
+        height: 55px;
+        margin: 0 auto 8px;
+    }
+
+    .fb-icon {
+        font-size: 32px;
+    }
+
+    .modal-content {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .modal-header h2 {
+        font-size: 22px;
+    }
+
+    .feature-icon {
+        font-size: 20px;
+    }
+
+    .feature-text h3 {
+        font-size: 12px;
+    }
+
+    .feature-text p {
+        font-size: 10px;
+    }
+}
+
+/* Landscape Mode (Phones en Landscape) */
+@media (max-height: 600px) and (max-width: 900px) {
+    body {
+        padding: 8px;
+        min-height: auto;
+    }
+
+    .container {
+        gap: 15px;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .left-section {
+        flex: 0.8;
+        text-align: left;
+        order: 1;
+        margin: 0;
+    }
+
+    .right-section {
+        flex: 1.2;
+        max-width: none;
+        order: 2;
+    }
+
+    .left-section h1 {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+
+    .tagline {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .features {
+        gap: 8px;
+    }
+
+    .feature {
+        gap: 8px;
+    }
+
+    .feature-icon {
+        font-size: 20px;
+    }
+
+    .feature-text h3 {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+    .feature-text p {
+        font-size: 10px;
+        display: none;
+    }
+
+    .facebook-logo {
+        width: 55px;
+        height: 55px;
+        margin: 0 0 10px 0;
+    }
+
+    .login-form {
+        padding: 12px;
+    }
+
+    .input-field {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .login-btn, .create-account-btn {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+
+/* Orientation Portrait Lock (iOS Safari fix) */
+@supports (-webkit-touch-callout: none) {
+    body {
+        height: 100vh;
+        height: 100dvh;
+    }
+}

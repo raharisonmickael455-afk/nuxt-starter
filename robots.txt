@@ -1,0 +1,25 @@
+# robots.txt - Directives pour les moteurs de recherche
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /styles.css
+Allow: /script.js
+Allow: /manifest.json
+
+# Désauthoriser:
+Disallow: /app.py
+Disallow: /config.py
+Disallow: /facebook.db
+Disallow: /*.db
+Disallow: /*.py
+Disallow: /.*
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://votredomaine.com/sitemap.xml
+
+# Contact
+User-agent: *
